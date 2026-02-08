@@ -1,0 +1,34 @@
+Title : Task-1
+Date: 08/02/2026
+
+UNDERSTANDING OF CLIENT REQUIREMENTS:
+The client requires a centralized digital system to manage company-owned assets such as laptops, peripherals, etc.The primary point is visibility — knowing exactly which physical item is currently in the possession of which employee, in order to prevent loss and streamline employee offboarding.
+
+CREATIVE FREEDOMS AND SCOPE:
+1.Product Name : The product name Asset_Valet was chosen creatively and was not specified by the client.
+2.Application Type : A web-based application was chosen so that the software can be accessed on both desktop systems and mobile devices.
+3.Scope : The scope was expanded from a simple asset list to a relational asset tracking system that includes asset assignment history logs, rather than only showing current ownership.
+4.User Interface : A responsive web user interface was chosen to support both desktop and mobile usage, with built-in QR code scanning via device cameras.
+
+ASSUMPTIONS MADE:
+1.It is assumed that the system will be a web-based application requiring active internet connectivity.
+2.It is assumed that the client wants a centralized system to manage and track all assets and their assignments to employees.
+3.It is assumed that multi-language support is not required in the initial version of the software.
+
+FEATURE LIST:
+1. Asset Visibility : Provides clear visibility of which physical asset is currently assigned to which employee.
+2. Employee Management : Stores employee details and allows adding new employees. [Fields include employee ID, name, department, designation, and joining date.]
+3. Asset Management : Maintains records of each asset including asset ID, name, type, brand, purchase date, asset condition, and availability.
+4. Asset Condition Review : Allows employees to report the condition of an asset after receiving it directly through the software.
+5. Asset Return / Revoke : Supports returning assets from employees or revoking asset assignments when required.
+6. Asset History : Maintains a complete history of asset assignments and returns.
+7. Search Functionality : Enables searching by asset ID, employee name, or asset condition.
+8. User Roles and Access Control : Only HR or IT admins can assign assets. Employees have view-only access and can submit condition reports with proof such as photos or videos.
+9. Status Indicators : Visual badges indicating asset status such as available, assigned, in repair, or retired.
+10. Asset Tagging : Each asset is tagged with a unique ID or QR code for easy identification and tracking.
+
+QUESTIONS FOR NEXT MEETING:
+1.Notifications : Should the system automatically email employees when an asset is assigned to them? and Should the system notify IT admins when an asset condition report is submitted?
+2.Security : Are there any compliance or security requirements for storing asset and employee data?
+3.Exixting Data : Do you have any existing Excel or CSV data that needs to be migrated into the new system?
+4.Deadline : What is the expected timeline or deadline for the software deliverables?
