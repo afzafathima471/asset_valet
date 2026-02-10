@@ -19,11 +19,11 @@ FEATURE LIST:
 1. Asset Visibility : Provides clear visibility of which physical asset is currently assigned to which employee.
 2. Employee Management : Stores employee details and allows adding new employees. [Fields include employee ID, name, department, designation, and joining date.]
 3. Asset Management : Maintains records of each asset including asset ID, name, type, brand, purchase date, asset condition, and availability.
-4. Asset Condition Review : Allows employees to report the condition of an asset after receiving it directly through the software.
+4. Asset Condition Review : Employees can submit asset condition reports, which are reviewed and recorded by admin users.
 5. Asset Return / Revoke : Supports returning assets from employees or revoking asset assignments when required.
 6. Asset History : Maintains a complete history of asset assignments and returns.
 7. Search Functionality : Enables searching by asset ID, employee name, or asset condition.
-8. User Roles and Access Control : Only HR or IT admins can assign assets. Employees have view-only access and can submit condition reports with proof such as photos or videos.
+8. User Roles and Access Control : The system supports role-based access control where only HR and IT admins can manage assets. Employees have limited interaction for reporting purposes.
 9. Status Indicators : Visual badges indicating asset status such as available, assigned, in repair, or retired.
 10. Asset Tagging : Each asset is tagged with a unique ID or QR code for easy identification and tracking.
 
