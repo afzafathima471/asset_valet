@@ -16,16 +16,42 @@ ASSUMPTIONS MADE:
 3.It is assumed that multi-language support is not required in the initial version of the software.
 
 FEATURE LIST:
-1. Asset Visibility : Provides clear visibility of which physical asset is currently assigned to which employee.
-2. Employee Management : Stores employee details and allows adding new employees. [Fields include employee ID, name, department, designation, and joining date.]
-3. Asset Management : Maintains records of each asset including asset ID, name, type, brand, purchase date, asset condition, and availability.
-4. Asset Condition Review : Employees can submit asset condition reports, which are reviewed and recorded by admin users.
-5. Asset Return / Revoke : Supports returning assets from employees or revoking asset assignments when required.
-6. Asset History : Maintains a complete history of asset assignments and returns.
-7. Search Functionality : Enables searching by asset ID, employee name, or asset condition.
-8. User Roles and Access Control : The system supports role-based access control where only HR and IT admins can manage assets. Employees have limited interaction for reporting purposes.
-9. Status Indicators : Visual badges indicating asset status such as available, assigned, in repair, or retired.
-10. Asset Tagging : Each asset is tagged with a unique ID or QR code for easy identification and tracking.
+1. Create Employee
+2. View All Employees
+3. View Employee Details
+4. Update Employee Information
+5. Delete Employee
+6. Create Asset
+7. View All Assets
+8. View Asset Details
+9. Update Asset Information
+10. Delete Asset
+11. Assign Asset to Employee
+12. View Assets Assigned to Specific Employee
+13. Return Asset from Employee
+14. Revoke Asset Assignment
+15. Update Asset Status to Available
+16. Update Asset Status to Assigned
+17. Update Asset Status to In Repair
+18. Update Asset Status to Retired
+19. Update Asset Condition
+20. Submit Asset Condition Report
+21. View All Condition Reports
+22. View Condition Report Details
+23. Update Condition Report Status
+24. View Asset Assignment History
+25. View Employee Asset History
+26. Search Asset by Asset ID
+27. Search Employee by Name
+28. Filter Assets by Condition
+29. Create Admin User
+30. View All Admin Users
+31. Update Admin User
+32. Delete Admin User
+33. Assign Role to User
+34. Remove Role from User
+35. Generate Asset Tag
+36. Retrieve Asset by Tag
 
 QUESTIONS FOR NEXT MEETING:
 1.Notifications : Should the system automatically email employees when an asset is assigned to them? and Should the system notify IT admins when an asset condition report is submitted?
