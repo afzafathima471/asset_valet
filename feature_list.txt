@@ -1,5 +1,5 @@
 Title : Task-1
-Date: 08/02/2026
+Date: 08/02/2026 
 
 UNDERSTANDING OF CLIENT REQUIREMENTS:
 The client requires a centralized digital system to manage company-owned assets such as laptops, peripherals, etc.The primary point is visibility — knowing exactly which physical item is currently in the possession of which employee, in order to prevent loss and streamline employee offboarding.
