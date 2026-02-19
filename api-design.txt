@@ -1,145 +1,288 @@
 List of API Designs:
 
-1.Feature: Create Employee
+1.
+Feature: Create Employee
+
 API Endpoint: POST /api/employees
+
 Database Action: INSERT a new row into the employees table with employee_id, name, department, designation, and joining_date.
 
-2.Feature: View All Employees
+
+2.
+Feature: View All Employees
+
 API Endpoint: GET /api/employees
+
 Database Action: SELECT all rows from the employees table.
 
-3.Feature: View Employee Details
+
+3.
+Feature: View Employee Details
+
 API Endpoint: GET /api/employees/{id}
+
 Database Action: SELECT a specific row from the employees table where employee_id = id.
 
-4.Feature: Update Employee Information
+
+4.
+Feature: Update Employee Information
+
 API Endpoint: PUT /api/employees/{id}
+
 Database Action: UPDATE the employee record in the employees table where employee_id = id.
 
-5.Feature: Delete Employee
+
+5.
+Feature: Delete Employee
+
 API Endpoint: DELETE /api/employees/{id}
+
 Database Action: DELETE the row from the employees table where employee_id = id.
 
-6.Feature: Create Asset
+
+6.
+Feature: Create Asset
+
 API Endpoint: POST /api/assets
+
 Database Action: INSERT a new row into the assets table with asset_id, name, type, brand, purchase_date, condition, and status.
 
-7.Feature: View All Assets
+
+7.
+Feature: View All Assets
+
 API Endpoint: GET /api/assets
+
 Database Action: SELECT all rows from the assets table.
 
-8.Feature: View Asset Details
+
+8.
+Feature: View Asset Details
+
 API Endpoint: GET /api/assets/{id}
+
 Database Action: SELECT a specific row from the assets table where asset_id = id.
 
-9.Feature: Update Asset Information
+
+9.
+Feature: Update Asset Information
+
 API Endpoint: PUT /api/assets/{id}
+
 Database Action: UPDATE the asset record in the assets table where asset_id = id.
 
-10.Feature: Delete Asset
+
+10.
+Feature: Delete Asset
+
 API Endpoint: DELETE /api/assets/{id}
+
 Database Action: DELETE the row from the assets table where asset_id = id.
 
-11.Feature: Assign Asset to Employee
+
+11.
+Feature: Assign Asset to Employee
+
 API Endpoint: POST /api/asset-assignments
+
 Database Action: INSERT a new row into the asset_assignments table and UPDATE the assets table to set status = 'Assigned'.
 
-12.Feature: View Assets Assigned to Specific Employee
+
+12.
+Feature: View Assets Assigned to Specific Employee
+
 API Endpoint: GET /api/employees/{id}/assets
+
 Database Action: SELECT rows from asset_assignments where employee_id = id and join with assets table.
 
-13.Feature: Return Asset from Employee
+
+13.
+Feature: Return Asset from Employee
+
 API Endpoint: PUT /api/asset-assignments/{id}/return
+
 Database Action: UPDATE the asset_assignments table to set return_date and UPDATE the assets table to set status = 'Available'.
 
-14.Feature: Revoke Asset Assignment
+
+14.
+Feature: Revoke Asset Assignment
+
 API Endpoint: DELETE /api/asset-assignments/{id}
+
 Database Action: DELETE the assignment record from asset_assignments and UPDATE assets table to set status = 'Available'.
 
-15.Feature: Update Asset Status to Available
+
+15.
+Feature: Update Asset Status to Available
+
 API Endpoint: PUT /api/assets/{id}/status/available
+
 Database Action: UPDATE the assets table to set status = 'Available'.
 
-16.Feature: Update Asset Status to Assigned
+
+16.
+Feature: Update Asset Status to Assigned
+
 API Endpoint: PUT /api/assets/{id}/status/assigned
+
 Database Action: UPDATE the assets table to set status = 'Assigned'.
 
-17.Feature: Update Asset Status to In Repair
+
+17.
+Feature: Update Asset Status to In Repair
+
 API Endpoint: PUT /api/assets/{id}/status/in-repair
+
 Database Action: UPDATE the assets table to set status = 'In Repair'.
 
-18.Feature: Update Asset Status to Retired
+
+18.
+Feature: Update Asset Status to Retired
+
 API Endpoint: PUT /api/assets/{id}/status/retired
+
 Database Action: UPDATE the assets table to set status = 'Retired'.
 
-19.Feature: Update Asset Condition
+
+19.
+Feature: Update Asset Condition
+
 API Endpoint: PUT /api/assets/{id}/condition
+
 Database Action: UPDATE the condition field in the assets table where asset_id = id.
 
-20.Feature: Submit Asset Condition Report
+
+20.
+Feature: Submit Asset Condition Report
+
 API Endpoint: POST /api/condition-reports
+
 Database Action: INSERT a new row into the condition_reports table with asset_id, employee_id, report_details, and status.
 
-21.Feature: View All Condition Reports
+
+21.
+Feature: View All Condition Reports
+
 API Endpoint: GET /api/condition-reports
+
 Database Action: SELECT all rows from the condition_reports table.
 
-22.Feature: View Condition Report Details
+
+22.
+Feature: View Condition Report Details
+
 API Endpoint: GET /api/condition-reports/{id}
+
 Database Action: SELECT a specific row from the condition_reports table where report_id = id.
 
-23.Feature: Update Condition Report Status
+
+23.
+Feature: Update Condition Report Status
+
 API Endpoint: PUT /api/condition-reports/{id}/status
+
 Database Action: UPDATE the status field in the condition_reports table where report_id = id.
 
-24.Feature: View Asset Assignment History
+
+24.
+Feature: View Asset Assignment History
+
 API Endpoint: GET /api/assets/{id}/history
+
 Database Action: SELECT all assignment records from asset_assignments where asset_id = id.
 
-25.Feature: View Employee Asset History
+
+25.
+Feature: View Employee Asset History
+
 API Endpoint: GET /api/employees/{id}/history
+
 Database Action: SELECT all assignment records from asset_assignments where employee_id = id.
 
-26.Feature: Search Asset by Asset ID
+
+26.
+Feature: Search Asset by Asset ID
+
 API Endpoint: GET /api/assets/search?asset_id={id}
+
 Database Action: SELECT rows from the assets table where asset_id matches the given id.
 
-27.Feature: Search Employee by Name
+
+27.
+Feature: Search Employee by Name
+
 API Endpoint: GET /api/employees/search?name={name}
+
 Database Action: SELECT rows from the employees table where name matches the given value.
 
-28.Feature: Filter Assets by Condition
+
+28.
+Feature: Filter Assets by Condition
+
 API Endpoint: GET /api/assets/filter?condition={condition}
+
 Database Action: SELECT rows from the assets table where condition matches the given value.
 
-29.Feature: Create Admin User
+
+29.
+Feature: Create Admin User
+
 API Endpoint: POST /api/admins
+
 Database Action: INSERT a new row into the admins table with name, email, and role.
 
-30.Feature: View All Admin Users
+
+30.
+Feature: View All Admin Users
+
 API Endpoint: GET /api/admins
+
 Database Action: SELECT all rows from the admins table.
 
-31.Feature: Update Admin User
+
+31.
+Feature: Update Admin User
+
 API Endpoint: PUT /api/admins/{id}
+
 Database Action: UPDATE the admin record in the admins table where admin_id = id.
 
-32.Feature: Delete Admin User
+
+32.
+Feature: Delete Admin User
+
 API Endpoint: DELETE /api/admins/{id}
+
 Database Action: DELETE the row from the admins table where admin_id = id.
 
-33.Feature: Assign Role to User
+
+33.
+Feature: Assign Role to User
+
 API Endpoint: PUT /api/users/{id}/role
+
 Database Action: UPDATE the role field in the users table where user_id = id.
 
-34.Feature: Remove Role from User
+
+34.
+Feature: Remove Role from User
+
 API Endpoint: DELETE /api/users/{id}/role
+
 Database Action: UPDATE the role field in the users table to remove assigned role.
 
-35.Feature: Generate Asset Tag
+
+35.
+Feature: Generate Asset Tag
+
 API Endpoint: POST /api/assets/{id}/generate-tag
+
 Database Action: UPDATE the assets table to store a generated unique tag or QR code value.
 
-36.Feature: Retrieve Asset by Tag
+
+36.
+Feature: Retrieve Asset by Tag
+
 API Endpoint: GET /api/assets/tag/{tag}
+
 Database Action: SELECT a row from the assets table where tag matches the given value.
