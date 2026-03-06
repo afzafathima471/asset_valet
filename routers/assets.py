@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app import models, schemas
+from app.security import RequirePrivilege 
 
 router = APIRouter()
 
@@ -62,7 +63,7 @@ def update_asset(asset_id: int, updated_data: schemas.AssetUpdate, db: Session =
 
 
 @router.delete("/assets/{asset_id}")
-def delete_asset(asset_id: int, db: Session = Depends(get_db)):
+def delete_asset(asset_id: int, db: Session = Depends(get_db), allowed: bool = Depends(RequirePrivilege("delete:asset"))):
     """
     Delete an asset.
     """
