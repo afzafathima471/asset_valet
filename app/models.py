@@ -57,3 +57,16 @@ class RolePermission(Base):
     id = Column(Integer, primary_key=True, index=True)
     role_id = Column(Integer, ForeignKey("roles.role_id"))
     permission_id = Column(Integer, ForeignKey("permissions.permission_id"))
+
+class AssetAssignment(Base):
+    __tablename__ = "asset_assignments"
+
+    id = Column(Integer, primary_key=True, index=True)
+    asset_id = Column(Integer, ForeignKey("assets.asset_id"))
+    employee_id = Column(Integer, ForeignKey("employees.employee_id"))
+    assignment_date = Column(Date)
+    expected_return_date = Column(Date, nullable=True)
+    actual_return_date = Column(Date, nullable=True)
+    initial_condition = Column(String, nullable=True)
+    return_condition = Column(String, nullable=True)
+    notes = Column(String, nullable=True)
