@@ -35,7 +35,12 @@ class AssetCreate(AssetBase):
     pass
 
 
-class AssetUpdate(AssetBase):
+class AssetUpdate(BaseModel):
+    name: str | None = None
+    asset_type: str | None = None
+    purchase_date: date | None = None
+    status: str | None =None
+    current_condition: str | None = None 
     pass
 
 
