@@ -14,6 +14,8 @@ class ConditionReportCreate(BaseModel):
     condition_status: str
     description: str
     action_taken: Optional[str] = None
+    reported_by: Optional[str] = None
+    image: Optional[str] = None
 
 class ConditionReportResponse(ConditionReportCreate):
     id: int
@@ -34,6 +36,8 @@ def create_report(report: ConditionReportCreate, db: Session = Depends(get_db)):
         condition_status=report.condition_status,
         description=report.description,
         action_taken=report.action_taken,
+        reported_by=report.reported_by,
+        image=report.image,
     )
     db.add(db_report)
     db.commit()

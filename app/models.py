@@ -80,3 +80,5 @@ class ConditionReport(Base):
     condition_status = Column(String)
     description = Column(String)
     action_taken = Column(String, nullable=True)
+    reported_by = Column(String, nullable=True)
+    image = Column(String, nullable=True)
